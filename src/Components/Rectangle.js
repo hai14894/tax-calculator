@@ -1,9 +1,9 @@
 import React from 'react'
 import "../style.css"
-const Rectangle = () => {
+const Rectangle = (props) => {
     return (
-        <div className = "rectangle">
-            Rectangle
+        <div className = {`rectangle ${props.styleName}`} >
+            {props.children}
         </div>
     )
 }
