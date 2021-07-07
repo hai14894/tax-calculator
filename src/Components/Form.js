@@ -31,7 +31,7 @@ const Form = (props) => {
       <Question question="Enter your total taxable income for the income year *" />
       <Rectangle styleName="rectangle-default">
         <span>$</span>
-        <input placeholder="Amount"></input>
+        <input type="number"  placeholder="Amount"></input>
         <span>.00</span>
       </Rectangle>
       <Rectangle styleName="rectangle-submit" visibility={props.visibility}>
