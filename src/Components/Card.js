@@ -1,10 +1,10 @@
 import React from "react";
 import "../style.css"
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className = "card">
-            <p>hello world</p>
+            {props.children}
         </div>
     )
 }

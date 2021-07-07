@@ -106,8 +106,16 @@ input {
   font-size: 14px;
   line-height: 17px;
 }
-span{
+span {
   margin-left: 10px;
   font-size: 14px;
   line-height: 17px;
+}
+p {
+  
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #8477c9;
 }

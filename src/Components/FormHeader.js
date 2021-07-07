@@ -1,9 +1,9 @@
 import React from 'react'
 import "../style.css"
-const FormHeader = () => {
+const FormHeader = (props) => {
     return (
         <div className="form-header">
-            Calculate your tax
+            {props.text}
         </div>
     )
 }

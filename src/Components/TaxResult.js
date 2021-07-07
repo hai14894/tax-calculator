@@ -4,17 +4,17 @@ import ColumnWrapper from "./ColumnWrapper";
 import Card from "./Card";
 import Form from "./Form";
 import "../style.css";
-const TaxForm = () => {
+const TaxResult = () => {
   return (
     <OuterBox>
       <ColumnWrapper>
-        <Card />
+        <Form text="Tax Results"/>
       </ColumnWrapper>
       <ColumnWrapper>
-        <Form text = "Calculate your tax"/>
+        <Card></Card>
       </ColumnWrapper>
     </OuterBox>
   );
 };
 
-export default TaxForm;
+export default TaxResult;
