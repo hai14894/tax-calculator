@@ -34,7 +34,7 @@ const Form = (props) => {
         <input placeholder="Amount"></input>
         <span>.00</span>
       </Rectangle>
-      <Rectangle styleName="rectangle-submit">
+      <Rectangle styleName="rectangle-submit" visibility={props.visibility}>
         <button>Calculate</button>
       </Rectangle>
     </div>
