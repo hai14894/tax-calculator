@@ -132,4 +132,6 @@ p {
 input[type="number"]:disabled {
   background: #dddddd;
 }
-
+.go-back{
+  margin-left: 16px;
+}
