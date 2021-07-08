@@ -10,7 +10,7 @@ const Form = (props) => {
   return (
     <div className="form">
       <FormHeader text={props.text} ></FormHeader>
-      <Rectangle styleName="rectangle-placeholder"><p>Fields marked with * are mandatory</p></Rectangle>
+      <Rectangle styleName="rectangle-placeholder" visibility={props.visibility}><p>Fields marked with * are mandatory</p></Rectangle>
       <Question question="Select your country of residence *" />
       <Rectangle styleName="rectangle-default">
         <select className="options">
