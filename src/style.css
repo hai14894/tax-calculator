@@ -128,7 +128,7 @@ p {
 .hide {
   display: none;
 }
-input[type="text"]:disabled {
+input[type="number"]:disabled {
   background: #dddddd;
 }
 

@@ -5,6 +5,7 @@ import Question from "./Question";
 
 import "../style.css";
 const Form = (props) => {
+    
   return (
     <div className="form">
       <FormHeader text={props.text} ></FormHeader>
@@ -35,7 +36,7 @@ const Form = (props) => {
         <span>.00</span>
       </Rectangle>
       <Rectangle styleName="rectangle-submit" visibility={props.visibility}>
-        <button>Calculate</button>
+        <button >Calculate</button>
       </Rectangle>
     </div>
   );
