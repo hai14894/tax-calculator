@@ -11,12 +11,12 @@ const Form = (props) => {
   return (
     <div className="form">
       <FormHeader text={props.text}></FormHeader>
-      <Rectangle
-        styleName="rectangle-placeholder"
-        visibility={props.visibility}
-      >
-        <p>Fields marked with * are mandatory</p>
-      </Rectangle>
+      {path == "/" && (
+        <Rectangle styleName="rectangle-placeholder">
+          <p>Fields marked with * are mandatory</p>
+        </Rectangle>
+      )}
+
       <Question question="Select your country of residence *" />
       <Rectangle styleName="rectangle-default">
         <select className="options">
@@ -41,11 +41,14 @@ const Form = (props) => {
         <input type="number" placeholder="Amount"></input>
         <span>.00</span>
       </Rectangle>
-      <Rectangle styleName="rectangle-submit" visibility={props.visibility}>
-        <Link to="/result">
-          <button>Calculate</button>
-        </Link>
-      </Rectangle>
+      {path == "/" && (
+        <Rectangle styleName="rectangle-submit">
+          <Link to="/result">
+            <button>Calculate</button>
+          </Link>
+        </Rectangle>
+      )}
+
       {path !== "/" && (
         <Link to="/">
           <div className="go-back">Go back to previous screen</div>

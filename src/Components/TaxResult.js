@@ -8,7 +8,7 @@ const TaxResult = () => {
   return (
     <OuterBox>
       <ColumnWrapper>
-        <Form text="Your Tax Results" visibility="hide"/>
+        <Form text="Your Tax Results"/>
       </ColumnWrapper>
       <ColumnWrapper>
         <Card></Card>
