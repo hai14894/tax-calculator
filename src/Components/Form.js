@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FormHeader from "./FormHeader";
 import Rectangle from "./Rectangle";
 import Question from "./Question";
@@ -36,7 +37,7 @@ const Form = (props) => {
         <span>.00</span>
       </Rectangle>
       <Rectangle styleName="rectangle-submit" visibility={props.visibility}>
-        <button >Calculate</button>
+        <Link to="/result"><button >Calculate</button></Link>
       </Rectangle>
     </div>
   );
