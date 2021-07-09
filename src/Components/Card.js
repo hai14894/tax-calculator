@@ -5,9 +5,9 @@ import CardText from "./CardText"
 const Card = (props) => {
     return (
         <div className = "card">
-            <CardText text="Your estimated taxtable income is:"/>
+            <CardText text="Your estimated income tax payable is:"/>
             
-            <CardRectangle></CardRectangle>
+            <CardRectangle>{props.income}</CardRectangle>
             <CardText text="Breakdown"/>
             <CardRectangle></CardRectangle>
             <CardRectangle></CardRectangle>

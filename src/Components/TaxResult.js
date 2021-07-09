@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import {AppContext} from "../context";
 import OuterBox from "./OuterBox";
 import ColumnWrapper from "./ColumnWrapper";
 import Card from "./Card";
 import Form from "./Form";
 import "../style.css";
 const TaxResult = () => {
+  const { income } = useContext(AppContext);
   return (
     <OuterBox>
       <ColumnWrapper>
-        <Form text="Your Tax Results"/>
+        <Form text="Your Tax Results" />
       </ColumnWrapper>
       <ColumnWrapper>
-        <Card></Card>
+        <Card income= {income }></Card>
       </ColumnWrapper>
     </OuterBox>
   );

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AppContext } from "../context";
 import FormHeader from "./FormHeader";
 import Rectangle from "./Rectangle";
 import Question from "./Question";
@@ -7,12 +8,12 @@ import Question from "./Question";
 import "../style.css";
 const Form = (props) => {
   const path = window.location.pathname;
-  console.log(path);
+  const {setIncome } = useContext(AppContext);
+  
   return (
     <div className="form">
       <FormHeader text={props.text}></FormHeader>
       {path === "/" && (
-          
         <Rectangle styleName="rectangle-placeholder">
           <p>Fields marked with * are mandatory</p>
         </Rectangle>
@@ -39,7 +40,11 @@ const Form = (props) => {
       <Question question="Enter your total taxable income for the income year *" />
       <Rectangle styleName="rectangle-default">
         <span>$</span>
-        <input type="number" placeholder="Amount"></input>
+        <input
+          type="number"
+          placeholder="Amount"
+          onChange={e=> setIncome(e.target.value)}
+        ></input>
         <span>.00</span>
       </Rectangle>
       {path === "/" && (
