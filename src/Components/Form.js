@@ -11,7 +11,8 @@ const Form = (props) => {
   return (
     <div className="form">
       <FormHeader text={props.text}></FormHeader>
-      {path == "/" && (
+      {path === "/" && (
+          
         <Rectangle styleName="rectangle-placeholder">
           <p>Fields marked with * are mandatory</p>
         </Rectangle>
@@ -41,7 +42,7 @@ const Form = (props) => {
         <input type="number" placeholder="Amount"></input>
         <span>.00</span>
       </Rectangle>
-      {path == "/" && (
+      {path === "/" && (
         <Rectangle styleName="rectangle-submit">
           <Link to="/result">
             <button>Calculate</button>
