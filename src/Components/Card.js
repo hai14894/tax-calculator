@@ -19,9 +19,9 @@ const Card = ({ income }) => {
   };
   const incomeTaxPayable = findIncomeTaxPayable(income);
 
-  const fifthTaxBracket = incomeTaxPayable - 51667;
-  const fourthTaxBracket = incomeTaxPayable - fifthTaxBracket - 29467;
-  const thirdTaxBracket = incomeTaxPayable - fourthTaxBracket - fifthTaxBracket- 5092;
+  const fifthTaxBracket = income > 180000 ? incomeTaxPayable - 51667 : 0;
+  const fourthTaxBracket = income > 120000 ? incomeTaxPayable - fifthTaxBracket - 29467 : 0;
+  const thirdTaxBracket = income > 45000 ? incomeTaxPayable - fourthTaxBracket - fifthTaxBracket- 5092 : 0;
   const secondTaxBracket = incomeTaxPayable - thirdTaxBracket - fourthTaxBracket -fifthTaxBracket
   return (
     <div className="card">
