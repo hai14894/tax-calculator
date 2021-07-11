@@ -8,7 +8,7 @@ const Card = ({ income }) => {
     if (income > 18200 && income <= 45000) {
       return (income - 18200) * 0.19;
     } else if (income > 45000 && income <= 120000) {
-      return (income - 45000) * 0.37 + 5092;
+      return (income - 45000) * 0.325 + 5092;
     } else if (income > 120000 && income <= 180000) {
       return (income - 120000) * 0.37 + 29467;
     } else if (income > 180000) {
