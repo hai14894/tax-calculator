@@ -134,6 +134,9 @@ input[type="number"]:disabled {
 }
 .go-back {
   margin-left: 16px;
+  color:  #8477C9;
+
+  ;
 }
 .card-rectangle {
   background-color: #ffffff;
@@ -141,7 +144,7 @@ input[type="number"]:disabled {
   height: 48px;
   border-radius: 3px;
   margin-bottom: 8px;
-  margin-left:21px;
+  margin-left: 21px;
 }
 .card-text {
   color: #ffffff;
@@ -150,4 +153,10 @@ input[type="number"]:disabled {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 8px;
+}
+input[type="number"]:disabled {
+  background: #e4e4e4;
+}
+select:disabled {
+  background: #e4e4e4;
 }
