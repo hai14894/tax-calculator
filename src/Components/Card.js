@@ -28,7 +28,7 @@ const Card = ({ income }) => {
       {path !== "/" && (
         <div>
           <CardText text="Your estimated income tax payable is:" />
-          <CardRectangle bigger>{incomeTaxPayable}</CardRectangle>
+          <CardRectangle bigger><div className="income-tax">${incomeTaxPayable.toLocaleString()}</div></CardRectangle>
           <CardText text="Breakdown" />
           <CardRectangle>0</CardRectangle>
           <CardRectangle>{secondTaxBracket}</CardRectangle>

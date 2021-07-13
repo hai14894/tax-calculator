@@ -134,9 +134,7 @@ input[type="number"]:disabled {
 }
 .go-back {
   margin-left: 16px;
-  color:  #8477C9;
-
-  ;
+  color: #8477c9;
 }
 .card-rectangle {
   background-color: #ffffff;
@@ -159,4 +157,15 @@ input[type="number"]:disabled {
 }
 select:disabled {
   background: #e4e4e4;
+}
+.income-tax {
+  color: #8477c9;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  padding-top: 13px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
 }

@@ -11,7 +11,7 @@ import Countries from "./Countries";
 import IncomeYears from "./IncomeYears";
 import { Link } from "react-router-dom";
 import "../style.css";
-const TaxForm = (props) => {
+const TaxForm = () => {
   const { setIncome, setCountry, setIncomeYear } = useContext(AppContext);
   return (
     <OuterBox>
