@@ -15,7 +15,7 @@
 }
 
 .card {
-  position: relative;
+  position: absolute;
   width: 320px;
   height: 448px;
   margin-left: 32px;
@@ -26,7 +26,31 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
+#circle {
+  position: absolute;
+  width: 220px;
+  height: 203.64px;
+  border-radius: 50%;
+  margin-left: -36.08px;
+  margin-top: 325.42px;
+  background: linear-gradient(
+    117.38deg,
+    #e7e6ff 10.73%,
+    rgba(231, 230, 255, 0) 84.05%
+  );
+}
+#small-circle {
+  width: 36.08px;
+  height: 35.17px;
+  margin-left: 143.38px;
+  margin-top: 330.45px;
+border-radius:50%;
+  background: #e7e7ff;
+  box-shadow: -10px 13px 3px rgba(0, 0, 0, 0.15);
+}
+
 .column {
   flex: 50%;
 }

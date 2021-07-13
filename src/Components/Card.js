@@ -32,6 +32,8 @@ const Card = ({ income }) => {
     incomeTaxPayable - thirdTaxBracket - fourthTaxBracket - fifthTaxBracket;
   return (
     <div className="card">
+      <div id="circle"></div>
+      <div id="small-circle"></div>
       {path !== "/" && (
         <div>
           <CardText text="Your estimated income tax payable is:" />
