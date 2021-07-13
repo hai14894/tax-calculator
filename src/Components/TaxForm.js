@@ -11,7 +11,7 @@ const TaxForm = () => {
         <Card />
       </ColumnWrapper>
       <ColumnWrapper>
-        <Form text = "Calculate your tax"/>
+        <Form text = "Calculate your tax"  />
       </ColumnWrapper>
     </OuterBox>
   );

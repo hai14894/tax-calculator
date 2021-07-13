@@ -4,6 +4,8 @@ import { AppContext } from "../context";
 import FormHeader from "./FormHeader";
 import Rectangle from "./Rectangle";
 import Question from "./Question";
+import Countries from "./Countries";
+import IncomeYears from "./IncomeYears";
 
 import "../style.css";
 const Form = (props) => {
@@ -21,21 +23,11 @@ const Form = (props) => {
 
       <Question question="Select your country of residence *" />
       <Rectangle styleName="rectangle-default">
-        <select className="options">
-          <option className="options" value="Australia">
-            Australia
-          </option>
-          <option className="options" value="Australia">
-            UK
-          </option>
-        </select>
+        <Countries/>
       </Rectangle>
       <Question question="Select an income year *" />
       <Rectangle styleName="rectangle-default">
-        <select className="options">
-          <option value="2020-2021">2020-2021</option>
-          <option value="2020-2021">2019-2020</option>
-        </select>
+        <IncomeYears/>
       </Rectangle>
       <Question question="Enter your total taxable income for the income year *" />
       <Rectangle styleName="rectangle-default">

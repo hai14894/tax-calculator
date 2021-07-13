@@ -10,7 +10,7 @@ const TaxResult = () => {
   return (
     <OuterBox>
       <ColumnWrapper>
-        <Form text="Your Tax Results" />
+        <Form text="Your Tax Results" disabled = "disabled"/>
       </ColumnWrapper>
       <ColumnWrapper>
         <Card income= {income }></Card>
