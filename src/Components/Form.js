@@ -14,7 +14,7 @@ const Form = (props) => {
   
   return (
     <div className="form">
-      <FormHeader text={props.text}></FormHeader>
+      {/* <FormHeader text={props.text}></FormHeader>
       {path === "/" && (
         <Rectangle styleName="rectangle-placeholder">
           <p>Fields marked with * are mandatory</p>
@@ -51,7 +51,8 @@ const Form = (props) => {
         <Link to="/">
           <div className="go-back">Go back to previous screen</div>
         </Link>
-      )}
+      )} */}
+      {props.children}
     </div>
   );
 };
