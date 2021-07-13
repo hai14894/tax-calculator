@@ -15,6 +15,7 @@ const TaxForm = () => {
   const { setIncome, setCountry, setIncomeYear } = useContext(AppContext);
   return (
     <OuterBox>
+      
       <ColumnWrapper>
         <Card />
       </ColumnWrapper>

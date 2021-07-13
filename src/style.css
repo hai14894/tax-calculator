@@ -32,9 +32,9 @@
   position: absolute;
   width: 220px;
   height: 203.64px;
-  border-radius: 50%;
-  margin-left: -36.08px;
-  margin-top: 325.42px;
+  border-radius: 49%;
+  margin-left: -40.08px;
+  margin-top: 293.42px;
   background: linear-gradient(
     117.38deg,
     #e7e6ff 10.73%,
@@ -46,7 +46,7 @@
   height: 35.17px;
   margin-left: 143.38px;
   margin-top: 330.45px;
-border-radius:50%;
+  border-radius: 50%;
   background: #e7e7ff;
   box-shadow: -10px 13px 3px rgba(0, 0, 0, 0.15);
 }
@@ -227,4 +227,25 @@ select:disabled {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+.absolute-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.tax-o-tron {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 58px;
+  color: white;
+  margin-top: 128px;
+  margin-left: 46px;
+}
+.introduction {
+  font-weight: normal ;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  margin-top: 2px;
+  margin-left: 46px;
 }

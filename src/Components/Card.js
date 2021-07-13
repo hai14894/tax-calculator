@@ -34,8 +34,14 @@ const Card = ({ income }) => {
     <div className="card">
       <div id="circle"></div>
       <div id="small-circle"></div>
-      {path !== "/" && (
-        <div>
+      {path === "/" &&(
+        <div className="absolute-div">
+        <div className=" tax-o-tron">Tax-o-tron</div>
+        <div className=" introduction">The free and simple online tax calculator</div>
+        </div>
+      ) }
+      {path === "/result" && (
+        <div className="absolute-div">
           <CardText text="Your estimated income tax payable is:" />
           <CardRectangle bigger>
             <div className="income-tax">
