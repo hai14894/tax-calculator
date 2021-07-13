@@ -22,7 +22,10 @@ const TaxForm = () => {
         <Form className="form">
           <FormHeader text="Calculate Your Tax" />
           <Rectangle styleName="rectangle-placeholder">
-            <p>Fields marked with * are mandatory</p>
+            <div className="info-wrapper">
+              <span className="material-icons-outlined">info</span>
+              <p>Fields marked with * are mandatory</p>
+            </div>
           </Rectangle>
           <Question question="Select your country of residence *" />
           <Rectangle styleName="rectangle-default">

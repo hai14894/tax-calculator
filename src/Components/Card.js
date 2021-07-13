@@ -3,6 +3,7 @@ import "../style.css";
 import CardRectangle from "./CardRectangle";
 import TaxBreakdown from "./TaxBreakdown";
 import CardText from "./CardText";
+import TaxBracket from "./TaxBracket";
 const Card = ({ income }) => {
   const path = window.location.pathname;
   const findIncomeTaxPayable = (income) => {
@@ -41,19 +42,23 @@ const Card = ({ income }) => {
           </CardRectangle>
           <CardText text="Breakdown" />
           <CardRectangle>
+          <TaxBracket bracket="$0-$18,200"/>
             <TaxBreakdown>$0</TaxBreakdown>
           </CardRectangle>
           <CardRectangle>
-            <div>asdasd</div>
+            <TaxBracket bracket="$18,201-$45,000"/>
             <TaxBreakdown>${secondTaxBracket.toLocaleString()}</TaxBreakdown>
           </CardRectangle>
           <CardRectangle>
+          <TaxBracket bracket="$45,001-$120,000"/>
             <TaxBreakdown>${thirdTaxBracket.toLocaleString()}</TaxBreakdown>
           </CardRectangle>
           <CardRectangle>
+          <TaxBracket bracket="$120,001-$180,000"/>
             <TaxBreakdown>${fourthTaxBracket.toLocaleString()}</TaxBreakdown>
           </CardRectangle>
           <CardRectangle>
+          <TaxBracket bracket="$180,000+"/>
             <TaxBreakdown>${fifthTaxBracket.toLocaleString()}</TaxBreakdown>
           </CardRectangle>
         </div>
