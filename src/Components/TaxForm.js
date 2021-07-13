@@ -12,7 +12,7 @@ import IncomeYears from "./IncomeYears";
 import { Link } from "react-router-dom";
 import "../style.css";
 const TaxForm = (props) => {
-  const { setIncome } = useContext(AppContext);
+  const { setIncome, setCountry, setIncomeYear } = useContext(AppContext);
   return (
     <OuterBox>
       <ColumnWrapper>
@@ -21,18 +21,16 @@ const TaxForm = (props) => {
       <ColumnWrapper>
         <Form className="form">
           <FormHeader text="Calculate Your Tax" />
-
           <Rectangle styleName="rectangle-placeholder">
             <p>Fields marked with * are mandatory</p>
           </Rectangle>
-
           <Question question="Select your country of residence *" />
           <Rectangle styleName="rectangle-default">
-            <Countries />
+            <Countries onChange={(e) => setCountry(e.target.value)} />
           </Rectangle>
           <Question question="Select an income year *" />
           <Rectangle styleName="rectangle-default">
-            <IncomeYears />
+            <IncomeYears onChange={(e) => setIncomeYear(e.target.value)} />
           </Rectangle>
           <Question question="Enter your total taxable income for the income year *" />
           <Rectangle styleName="rectangle-default">
@@ -44,7 +42,6 @@ const TaxForm = (props) => {
             ></input>
             <span>.00</span>
           </Rectangle>
-
           <Rectangle styleName="rectangle-submit">
             <Link to="/result">
               <button>Calculate</button>
