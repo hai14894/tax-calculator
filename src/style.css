@@ -143,6 +143,9 @@ input[type="number"]:disabled {
   border-radius: 3px;
   margin-bottom: 8px;
   margin-left: 21px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .card-text {
   color: #ffffff;
@@ -163,9 +166,16 @@ select:disabled {
   font-weight: bold;
   font-size: 36px;
   line-height: 43px;
-  text-align: center;
-  padding-top: 13px;
+  margin:auto;
  overflow: hidden;
  text-overflow: ellipsis;
  white-space: nowrap;
+}
+.tax-breakdown{
+margin-top: 12px;
+margin-right: 12px;
+font-size: 18px;
+line-height: 22px;
+color: #8477C9;
+overflow: hidden;
 }

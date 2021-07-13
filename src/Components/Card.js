@@ -1,6 +1,7 @@
 import React from "react";
 import "../style.css";
 import CardRectangle from "./CardRectangle";
+import TaxBreakdown from "./TaxBreakdown";
 import CardText from "./CardText";
 const Card = ({ income }) => {
   const path = window.location.pathname;
@@ -20,21 +21,41 @@ const Card = ({ income }) => {
   const incomeTaxPayable = findIncomeTaxPayable(income);
 
   const fifthTaxBracket = income > 180000 ? incomeTaxPayable - 51667 : 0;
-  const fourthTaxBracket = income > 120000 ? incomeTaxPayable - fifthTaxBracket - 29467 : 0;
-  const thirdTaxBracket = income > 45000 ? incomeTaxPayable - fourthTaxBracket - fifthTaxBracket- 5092 : 0;
-  const secondTaxBracket = incomeTaxPayable - thirdTaxBracket - fourthTaxBracket -fifthTaxBracket
+  const fourthTaxBracket =
+    income > 120000 ? incomeTaxPayable - fifthTaxBracket - 29467 : 0;
+  const thirdTaxBracket =
+    income > 45000
+      ? incomeTaxPayable - fourthTaxBracket - fifthTaxBracket - 5092
+      : 0;
+  const secondTaxBracket =
+    incomeTaxPayable - thirdTaxBracket - fourthTaxBracket - fifthTaxBracket;
   return (
     <div className="card">
       {path !== "/" && (
         <div>
           <CardText text="Your estimated income tax payable is:" />
-          <CardRectangle bigger><div className="income-tax">${incomeTaxPayable.toLocaleString()}</div></CardRectangle>
+          <CardRectangle bigger>
+            <div className="income-tax">
+              ${incomeTaxPayable.toLocaleString()}
+            </div>
+          </CardRectangle>
           <CardText text="Breakdown" />
-          <CardRectangle>0</CardRectangle>
-          <CardRectangle>{secondTaxBracket}</CardRectangle>
-          <CardRectangle>{thirdTaxBracket}</CardRectangle>
-          <CardRectangle>{fourthTaxBracket}</CardRectangle>
-          <CardRectangle>{fifthTaxBracket}</CardRectangle>
+          <CardRectangle>
+            <TaxBreakdown>$0</TaxBreakdown>
+          </CardRectangle>
+          <CardRectangle>
+            <div>asdasd</div>
+            <TaxBreakdown>${secondTaxBracket.toLocaleString()}</TaxBreakdown>
+          </CardRectangle>
+          <CardRectangle>
+            <TaxBreakdown>${thirdTaxBracket.toLocaleString()}</TaxBreakdown>
+          </CardRectangle>
+          <CardRectangle>
+            <TaxBreakdown>${fourthTaxBracket.toLocaleString()}</TaxBreakdown>
+          </CardRectangle>
+          <CardRectangle>
+            <TaxBreakdown>${fifthTaxBracket.toLocaleString()}</TaxBreakdown>
+          </CardRectangle>
         </div>
       )}
     </div>
